@@ -178,7 +178,7 @@ describe('link-check', function () {
     });
 
     it('should handle file path containing spaces', function(done) {
-        linkCheck('fixtures/s p a c e/A.md', { baseUrl: 'file://' + __dirname }, function(err, result) {
+        linkCheck('A.md', { baseUrl: 'file://' + __dirname + '/fixtures/s p a c e'}, function(err, result) {
             expect(err).to.be(null);
 
             expect(result.err).to.be(null);
